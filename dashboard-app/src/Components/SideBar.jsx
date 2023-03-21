@@ -13,8 +13,9 @@ import SendIcon from '@mui/icons-material/Send';
 import StarIcon from '@mui/icons-material/Star';
 import SnoozeIcon from '@mui/icons-material/Snooze';
 import DeleteIcon from '@mui/icons-material/Delete';
+import LabelIcon from '@mui/icons-material/Label';
 
-//OOP Template
+//OOP Template for Menu
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -64,7 +65,7 @@ const SideBar = () => {
                         onClick={() => setIsCollapsed(!isCollapsed)}
                         icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
                         style={{
-                            margin: "10px 0 20px 0",
+                            margin: "20px 0 20px 0",
                             color: colors.grey[100],
                         }}
                     >
@@ -85,7 +86,7 @@ const SideBar = () => {
                         )}
                     </MenuItem>
                     {/*Dashboard Icon*/}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"10px"}>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
                             title="Dashboard"
                             to="/"
@@ -95,7 +96,7 @@ const SideBar = () => {
                         />
                     </Box>
                     {/*} Inbox Icon */}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"10px"}>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
                             title="Inbox"
                             to="/inbox"
@@ -105,7 +106,7 @@ const SideBar = () => {
                         />
                     </Box>
                     {/*} Send Icon */}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"10px"}>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
                             title="Send"
                             to=""
@@ -115,7 +116,7 @@ const SideBar = () => {
                         />
                     </Box>
                     {/*} Favourite Icon */}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"10px"}>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
                             title="Favourites"
                             to=""
@@ -125,7 +126,7 @@ const SideBar = () => {
                         />
                     </Box>
                     {/*} Snooze Icon */}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"10px"}>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
                             title="Snooze"
                             to=""
@@ -135,11 +136,50 @@ const SideBar = () => {
                         />
                     </Box>
                     {/*} Trash Icon */}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"10px"}>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
                             title="Trash"
                             to=""
                             icon={<DeleteIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                    </Box>
+                    <Box paddingLeft={"20%"} paddingTop={"50px"}>
+                        <h3>Labels</h3>
+                    </Box>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
+                        <Item
+                            title="Personal"
+                            to=""
+                            icon={<LabelIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                    </Box>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
+                        <Item
+                            title="School"
+                            to=""
+                            icon={<LabelIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                    </Box>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
+                        <Item
+                            title="Office"
+                            to=""
+                            icon={<LabelIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                    </Box>
+                    <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"} paddingBottom={"100%"}>
+                        <Item
+                            title="Social"
+                            to=""
+                            icon={<LabelIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
