@@ -32,7 +32,7 @@ import Inbox from './Pages/Inbox';
 
 function App() {
   const [theme, colorMode] = useMode();
-  const [isSideBar, setIsSideBar] = useState(false);
+  const [isSideBar, setIsSideBar] = useState(true);
   
   return (
     <ColorModeContext.Provider value={colorMode}>

@@ -2,9 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
-import { Box, IconButton, Typography, useTheme } from '@mui/material';
+import { Box, IconButton, Typography, useTheme, Badge} from '@mui/material';
 import { Link } from 'react-router-dom';
 import { tokens } from '../theme';
+//(pending) import data from database for icon badgecontent number
 
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -24,7 +25,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             active={selected === title}
             style={{ color: colors.grey }}
             onClick={() => setSelected(title)}
-            icon={icon}
+            icon = {icon}
         >
             <Typography>{title}</Typography>
             <Link to={to} />
@@ -39,24 +40,16 @@ const SideBar = () => {
     const [selected, setSelected] = useState("Dashboard");
 
     return (
-        <Box
+        <Box 
             sx={{
-                "& .pro-sidebar-inner": {
-                    background: `${colors.primary[400]} !important`,
-                },
-                "& .pro-icon-wrapper": {
-                    backgroundColor: "transparent !important",
-                },
-                "& .pro-inner-item": {
-                    padding: "5px 35px 5px 20px !important",
-                },
-                "& .pro-inner-item:hover": {
-                    color: "#868dfb !important",
-                },
-                "& .pro-menu-item.active": {
-                    color: "#6870fa !important",
-                },
+                "& .pro-sidebar-inner": {background: `${colors.primary[400]} !important`,},
+                "& .pro-icon-wrapper": {backgroundColor: "transparent !important",},
+                "& .pro-inner-item": {padding: "5px 35px 5px 20px !important",},
+                "& .pro-inner-item:hover": {color: "#868dfb !important",},
+                "& .pro-menu-item.active": {color: "#6870fa !important",},
             }}
+            // display="flex"
+            // position="static"
         >
             <ProSidebar collapsed={isCollapsed}>
                 <Menu iconShape="square">
@@ -65,7 +58,7 @@ const SideBar = () => {
                         onClick={() => setIsCollapsed(!isCollapsed)}
                         icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
                         style={{
-                            margin: "20px 0 20px 0",
+                            margin: "0px 0 20px 0",
                             color: colors.grey[100],
                         }}
                     >
@@ -85,6 +78,7 @@ const SideBar = () => {
                             </Box>
                         )}
                     </MenuItem>
+                    
                     {/*Dashboard Icon*/}
                     <Box paddingLeft={isCollapsed ? undefined : "10%"} paddingTop={"20px"}>
                         <Item
@@ -100,7 +94,7 @@ const SideBar = () => {
                         <Item
                             title="Inbox"
                             to="/inbox"
-                            icon={<EmailIcon />}
+                            icon={<Badge badgeContent={30} color="primary"><EmailIcon /></Badge>}
                             selected={selected}
                             setSelected={setSelected}
                         />
