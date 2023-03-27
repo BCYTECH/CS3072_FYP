@@ -124,6 +124,11 @@ export const tokens = (mode) => ({
 export const themeSettings = (mode) => {
   const colors = tokens(mode);
   return {
+    transitions:{
+      duration:{
+        standard: 300,
+      }
+    },
     palette: {
       mode: mode,
       ...(mode === "dark"
