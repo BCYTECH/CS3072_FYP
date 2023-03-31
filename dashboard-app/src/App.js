@@ -7,7 +7,7 @@ import {CssBaseline , ThemeProvider, Box} from '@mui/material';
 import TopBar from './Components/TopBar';
 import SideBar from './Components/SideBar';
 import Dashboard from './Pages/Dashboard';
-import Inbox from './Pages/Inbox';
+//import Inbox from './Pages/Inbox';
 
 import { tokens } from './theme';
 
@@ -40,7 +40,7 @@ function App() {
             }}>
               <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/inbox" element={<Inbox />} />
+                {/* <Route path="/inbox" element={<Inbox />} /> */}
               </Routes>
             </main>
           </Box>
@@ -51,3 +51,6 @@ function App() {
 }
 
 export default App;
+
+//Reference from https://www.youtube.com/watch?v=wYpCWwD1oz0
+//Reference from https://github.com/ed-roh/react-admin-dashboard/blob/master/src/App.js

@@ -217,3 +217,5 @@ export const useMode = () => {
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return [theme, colorMode];
 };
+
+//Reference from https://github.com/ed-roh/react-admin-dashboard/blob/master/src/theme.js

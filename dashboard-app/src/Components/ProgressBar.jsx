@@ -21,3 +21,7 @@ const ProgressBar = ({progress = "0.75", size = "40"}) => {
         </Box>
     );
 }
+
+//Not Used
+//Reference from https://github.com/ed-roh/react-admin-dashboard/blob/master/src/components/ProgressCircle.jsx
+//Reference from https://www.youtube.com/watch?v=wYpCWwD1oz0 
