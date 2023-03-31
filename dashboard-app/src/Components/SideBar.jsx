@@ -86,7 +86,7 @@ const SideBar = () => {
                     <Item
                         title="Inbox"
                         to="/inbox"
-                        icon={<Badge badgeContent={30} color="primary"><EmailIcon /></Badge>}
+                        icon={<Badge badgeContent={10} color="primary"><EmailIcon /></Badge>}
                         selected={selected}
                         setSelected={setSelected}
                     />

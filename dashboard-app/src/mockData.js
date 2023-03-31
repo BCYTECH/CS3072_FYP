@@ -494,7 +494,7 @@ export const mockPieData = [
   {
     id: "urgent",
     label: "Urgent",
-    value: 5,
+    value: 4,
     color: "hsl(0, 85%, 39%)",
   },
   {
@@ -506,7 +506,7 @@ export const mockPieData = [
   {
     id: "standard",
     label: "Standard",
-    value: 2,
+    value: 3,
     color: "hsl(76, 73%, 44%)",
   },
 ];

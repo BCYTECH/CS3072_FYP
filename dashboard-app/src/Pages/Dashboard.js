@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, Box, useTheme, Button} from "@mui/material";
+import { Typography, Box, useTheme, Button } from "@mui/material";
 import { tokens } from '../theme';
 import PieChart from '../Components/PieChart';
 
@@ -7,14 +7,14 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import Info from '@mui/icons-material/Info';
-import EmailCategory from '../Components/EmailCategory';
+
+import EmailCategoryUrgent from '../Components/EmailCategoryUrgent';
+import EmailCategoryImportant from '../Components/EmailCategoryImportant';
+import EmailCategoryStandard from '../Components/EmailCategoryStandard';
 
 
 // import { ThemeProvider } from '@mui/material/styles';
 //import { display } from '@mui/system';
-// (pending) import data from database
-
-// import ReactDOM from 'react-dom';
 // import TopBar from '../Components/TopBar';
 //import './Pages/Dashboard.css';
 
@@ -53,7 +53,7 @@ export default function Dashboard() {
                         <Info/>
                         <Typography variant='h4'justifyContent="space-between"alignItems="center" paddingLeft={"10px"}> Urgent </Typography>
                     </Box>
-                    <EmailCategory/>
+                    <Box paddingTop="20px"> <EmailCategoryUrgent/> </Box>
                 </Box>
 
                 {/* Category 2 */}
@@ -61,7 +61,8 @@ export default function Dashboard() {
                     <Box display={"flex"} borderBottom={"3px solid #FFA84A"} paddingBottom={"10px"}>
                         <PriorityHighIcon/>
                         <Typography variant='h4'justifyContent="space-between"alignItems="center" paddingLeft={"10px"}> Important </Typography>
-                    </Box>  
+                    </Box> 
+                    <Box paddingTop="20px"> <EmailCategoryImportant/> </Box> 
                 </Box>
 
                 {/* Category 3 */}
@@ -70,7 +71,7 @@ export default function Dashboard() {
                         <LocalOfferIcon/>
                         <Typography variant='h4'justifyContent="space-between"alignItems="center" paddingLeft={"10px"}> Standard </Typography>
                     </Box>
-                    
+                    <Box paddingTop="20px"> <EmailCategoryStandard/> </Box>
                 </Box>
 
                 {/* Statistics */}

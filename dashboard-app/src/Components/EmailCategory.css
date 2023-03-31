@@ -1,0 +1,13 @@
+h3 {
+    display: inline-block;
+    margin: 0;
+}
+
+h4{
+    margin: 0;
+}
+
+#date{
+    float: right;
+    margin: 0;
+}
