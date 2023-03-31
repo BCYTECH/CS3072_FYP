@@ -2,11 +2,12 @@ import React from 'react';
 import {Typography, Box, useTheme, Button} from "@mui/material";
 import { tokens } from '../theme';
 import PieChart from '../Components/PieChart';
+
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import InfoIcon from '@mui/icons-material/Info';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import Info from '@mui/icons-material/Info';
+import EmailCategory from '../Components/EmailCategory';
 
 
 // import { ThemeProvider } from '@mui/material/styles';
@@ -38,7 +39,7 @@ export default function Dashboard() {
                 </Box>
                 <Box paddingTop={"80px"}>
                     <Typography marginBottom={"10px"} variant={"h1"} fontWeight="bold"> Good Evening </Typography>
-                    <Typography marginBottom={"20px"} variant={"h2"}> You have 30 unread emails </Typography>
+                    <Typography marginBottom={"20px"} variant={"h2"}> You have 10 unread emails </Typography>
                     <Button variant='contained' size='large' color="primary">Start Review</Button>
                 </Box>
             </Box>
@@ -52,6 +53,7 @@ export default function Dashboard() {
                         <Info/>
                         <Typography variant='h4'justifyContent="space-between"alignItems="center" paddingLeft={"10px"}> Urgent </Typography>
                     </Box>
+                    <EmailCategory/>
                 </Box>
 
                 {/* Category 2 */}

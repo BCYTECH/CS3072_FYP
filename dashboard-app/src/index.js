@@ -4,21 +4,24 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import {initializeApp} from 'firebase/app';
+//import {getDatabase} from 'firebase/database'
+import {getFirestore} from 'firebase/firestore'
 //import reportWebVitals from './reportWebVitals';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC8AnbuKJEyYxvEo9t9blE5mqzlYX-WdPM",
-  authDomain: "test-470a5.firebaseapp.com",
-  databaseURL: "https://test-470a5.firebaseio.com",
-  projectId: "test-470a5",
-  storageBucket: "test-470a5.appspot.com",
-  messagingSenderId: "818708596546",
-  appId: "1:818708596546:web:48f737f284ed1693636adb"
+  apiKey: "AIzaSyBb0BmU297csv6u3V8Ygshg4N927ibULSo",
+  authDomain: "email-test-f0692.firebaseapp.com",
+  projectId: "email-test-f0692",
+  storageBucket: "email-test-f0692.appspot.com",
+  messagingSenderId: "16505624735",
+  appId: "1:16505624735:web:edf55cac0f7dc65882eaaa",
+  measurementId: "G-0VC5KE6Q1T"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

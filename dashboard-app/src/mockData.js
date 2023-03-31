@@ -1,5 +1,98 @@
 import {tokens} from "./theme"
 
+export const mockEmail = [
+  {
+    messageID: 1,
+    date: "15/03/2023",
+    senderAddress: "jonsnow@gmail.com",
+    subject: "Project Deadline Updated",
+    category: "urgent",
+    emailBody: "Dear colleagues, please see below the updated deadline for this project.",
+    readStatus: "unread",
+  },
+  {
+    messageID: 2,
+    date: "28/03/2023",
+    senderAddress: "marysmith@hotmail.com",
+    subject: "Invitation to Company Event",
+    category: "standard",
+    emailBody: "Hi everyone, you're invited to our company's annual event. Please RSVP by the end of the week!",
+    readStatus: "unread",
+  },
+  {
+    messageID: 3,
+    date: "25/03/2023",
+    senderAddress: "peterparker@gmail.com",
+    subject: "Important Information Regarding Your Benefits",
+    category: "urgent",
+    emailBody: "Hello, please review the attached document for important information regarding your benefits.",
+    readStatus: "read",
+  },
+  {
+    messageID: 4,
+    date: "22/03/2023",
+    senderAddress: "janedoe@yahoo.com",
+    subject: "Reminder: Meeting at 2pm",
+    category: "urgent",
+    emailBody: "Just a friendly reminder that we have a meeting tomorrow at 2pm. Please be prompt!",
+    readStatus: "unread",
+  },
+  {
+    messageID: 5,
+    date: "18/03/2023",
+    senderAddress: "johnnyappleseed@gmail.com",
+    subject: "New Product Release",
+    category: "urgent",
+    emailBody: "Our company is proud to announce the release of our new product. Check it out on our website!",
+    readStatus: "read",
+  },
+  {
+    messageID: 6,
+    date: "15/03/2023",
+    senderAddress: "samanthajones@hotmail.com",
+    subject: "Happy Birthday!",
+    category: "standard",
+    emailBody: "Happy Birthday! Have a wonderful day filled with joy and happiness.",
+    readStatus: "unread",
+  },
+  {
+    messageID: 7,
+    date: "12/03/2023",
+    senderAddress: "jimmyjohnson@yahoo.com",
+    subject: "Employee Performance Review",
+    category: "important",
+    emailBody: "Please schedule a time for your employee performance review with HR as soon as possible.",
+    readStatus: "unread",
+  },
+  {
+    messageID: 8,
+    date: "10/03/2023",
+    senderAddress: "davidsmith@gmail.com",
+    subject: "Project Update",
+    category: "important",
+    emailBody: "Just wanted to give everyone a quick update on the project. Things are going well so far!",
+    readStatus: "read",
+  },
+  {
+    messageID: 9,
+    date: "07/03/2023",
+    senderAddress: "mariagarcia@hotmail.com",
+    subject: "New Employee Orientation",
+    category: "standard",
+    emailBody: "This is a reminder that the new employee orientation is scheduled for next week. Please plan accordingly!",
+    readStatus: "unread",
+  },
+  {
+    messageID: 10,
+    date: "04/03/2023",
+    senderAddress: "johndoe@yahoo.com",
+    subject: "Time Off Request",
+    category: "important",
+    emailBody: "I need to request time off for next week. Can someone please cover for me?",
+    readStatus: "unread",
+  }
+];
+
 export const mockDataTeam = [
   {
     id: 1,
@@ -399,34 +492,22 @@ export const mockBarData = [
 
 export const mockPieData = [
   {
-    id: "hack",
-    label: "hack",
-    value: 239,
-    color: "hsl(104, 70%, 50%)",
+    id: "urgent",
+    label: "Urgent",
+    value: 5,
+    color: "hsl(0, 85%, 39%)",
   },
   {
-    id: "make",
-    label: "make",
-    value: 170,
-    color: "hsl(162, 70%, 50%)",
+    id: "important",
+    label: "Important",
+    value: 3,
+    color: "hsl(31, 100%, 65%)",
   },
   {
-    id: "go",
-    label: "go",
-    value: 322,
-    color: "hsl(291, 70%, 50%)",
-  },
-  {
-    id: "lisp",
-    label: "lisp",
-    value: 503,
-    color: "hsl(229, 70%, 50%)",
-  },
-  {
-    id: "scala",
-    label: "scala",
-    value: 584,
-    color: "hsl(344, 70%, 50%)",
+    id: "standard",
+    label: "Standard",
+    value: 2,
+    color: "hsl(76, 73%, 44%)",
   },
 ];
 
