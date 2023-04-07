@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import {initializeApp} from 'firebase/app';
-//import {getDatabase} from 'firebase/database'
 import {getFirestore} from 'firebase/firestore'
-//import reportWebVitals from './reportWebVitals';
+//import {getDatabase} from 'firebase/database'
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -36,3 +36,8 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
+
+// Reference from https://firebase.google.com/docs/web/learn-more?authuser=0&hl=en#modular-version
+// Reference from https://firebase.google.com/docs/database/web/start?authuser=0
+// Reference from https://firebase.google.com/docs/web/learn-more#config-object
+// Reference from https://www.youtube.com/watch?v=q5J5ho7YUhA
